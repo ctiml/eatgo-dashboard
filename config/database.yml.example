@@ -1,0 +1,12 @@
+development: &default
+  adapter: mysql2
+  encoding: utf8
+  database: eatgo-dashboard_development
+  host: localhost
+  username: root
+  password: "123456"
+
+test: &TEST
+  <<: *default
+  database: eatgo-dashboard_test
+
