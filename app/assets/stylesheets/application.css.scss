@@ -3,7 +3,7 @@
 //= require font-awesome
 
 .list-left {
-    background-color: #f7f7ff;
+    background-color: #f9f9ff;
     display: block;
     //min-width: 100px;
     width: 230px;
@@ -13,7 +13,8 @@
     margin: 0;
     padding: 0;
     font-size: 1.2em;
-    border-right: solid 7px #d7d7dd;
+    border-right: solid 8px #d7e5dd;
+    cursor: w-resize;
  
     ul {
         margin: 0px;
@@ -22,6 +23,15 @@
 
         li {
             line-height: 1.7em; 
+            a {
+                text-decoration: none;
+            }
+            a.list-item {
+                display: block;
+            }
+            a.focus-on {
+                font-weight: bold;
+            }
         }
     }
 }
