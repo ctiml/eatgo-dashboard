@@ -1,3 +1,46 @@
 //= require_self
 //= require common
 //= require font-awesome
+
+.list-left {
+    background-color: #f7f7ff;
+    display: block;
+    //min-width: 100px;
+    width: 230px;
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    border-right: solid 7px #d7d7dd;
+ 
+    ul {
+        margin: 0px;
+        padding: 20px;
+        list-style-type: none;
+
+        li {
+            line-height: 1.7em; 
+        }
+    }
+}
+.list-right {
+    background-color: #eee;
+    position: relative;
+    display: block;
+    height: 800px;
+    width: 87%;
+    overflow: auto;
+    margin: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        overflow: hidden;
+    }
+}

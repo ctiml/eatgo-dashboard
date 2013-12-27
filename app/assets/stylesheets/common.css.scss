@@ -27,3 +27,15 @@
 .group {
    zoom: 1; /* IE6&7 */
 }
+.row {
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    position: relative;
+    top: -20px;
+}
+.container {
+    width: 100%;
+}
