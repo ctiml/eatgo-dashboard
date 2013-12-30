@@ -9,7 +9,7 @@ $(document).ready(function(){
         var nav = $('.navbar-inner');
         left.height($(window).height() - nav.height());
         right.height($(window).height() - nav.height());
-        right.width($(window).width() - left.width() - (8+1));
+        right.width($(window).width() - left.width() - (8+2));
     });
     $('ul.nav li a').on('click', function(ev){
         var q = $(ev.currentTarget).attr('href').substr(1)
@@ -25,7 +25,17 @@ $(document).ready(function(){
             var a = $(ev.currentTarget);
             var url = a.data('url');
             if (is_supported(url)) {
-                $('.iframe-container').attr('src', url);
+                var right = $('.list-right');
+                $('.iframe-container', right).hide();
+                var iframe = $('.iframe-container[src="' + url + '"]', right);
+                
+                if (iframe.length == 0) {
+                    var new_iframe = $('<iframe></iframe>');
+                    right.append(new_iframe);
+                    new_iframe.addClass('iframe-container').attr('src', url).show();
+                } else {
+                    iframe.show();
+                }
             } else {
                 window.open(url);
             }
@@ -40,6 +50,17 @@ $(document).ready(function(){
 
         $('a.list-item').on('mouseleave', function(ev) {
             $(ev.currentTarget).removeClass('focus-on');
+        });
+
+        $('div.folder').on('click', function(ev){
+            var folder = $(ev.currentTarget);
+            var li = folder.parent();
+            var ul = $('ul', li);
+            ul.slideToggle(200, function(){
+                var icon = (ul.css('display') == "none") ? "icon-folder-close" : "icon-folder-open";
+                $('i', li).first().removeClass().addClass(icon);
+            });
+            return false;
         });
 
         $('.list-left').on('click', function(ev) {
@@ -60,8 +81,11 @@ $(document).ready(function(){
     }
     // }}}
 
+    // {{{ Functions
     var is_supported = function(url) {
-        if (url.match(/^http(s)?:\/\/docs\.google\.com\//)) { return true; }
+        if (url.match(/^http(s)?:\/\/docs\.google\.com/)) { return true; }
+        if (url.match(/^http(s)?:\/\/\w+\.hackpad\.com/)) { return true; }
+        if (url.match(/^http(s)?:\/\/ethercalc\.org\//)) { return true; }
         return false;
     };
 
@@ -69,11 +93,14 @@ $(document).ready(function(){
         var ul = $('<ul></ul>');
         container.append(ul);
         $.each(list, function(index, item){
+            var icon = $('<i></i>');
             var li = $('<li></li>');
             ul.append(li);
             if (item.list != null) {
-                var folder = $('<a href="#"></a>');
-                folder.addClass('folder').text(item.name);
+                var a = $('<a href="#"></a>');
+                a.text(item.name);
+                var folder = $('<div></div>');
+                folder.addClass('folder').append(icon.addClass('icon-folder-open')).append(a);
                 li.append(folder);
                 build_list(item.list, li);
             } else {
@@ -106,11 +133,11 @@ $(document).ready(function(){
         li.addClass('active');
         li.siblings().removeClass('active');
     };
+    // }}}
 
     $(window).trigger('resize');
 
     var q = default_category;
-    //var category = window.location.pathname.match(/^\/category\/(.*)/)
     var category = window.location.hash.substr(1)
     if (category.length > 0) {
         q = category;

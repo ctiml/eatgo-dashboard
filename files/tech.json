@@ -1,4 +1,12 @@
 [
     {"name":"eatgo 服務", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0AlpHifSaI1fpdC1vamR1NzlzLWx6a3hzREItX0NibkE&usp=drive_web#gid=0"},
-    {"name":"eatgovillas sites", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0AlpHifSaI1fpdHlaVzdUZDFCRFk4Ukw0cHdYWThEMlE&usp=drive_web#gid=0"}
+    {"name":"eatgovillas sites", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0AlpHifSaI1fpdHlaVzdUZDFCRFk4Ukw0cHdYWThEMlE&usp=drive_web#gid=0"},
+    {"name":"HipChat", "url":"https://eatgo.hipchat.com"},
+    {"name":"Redmine", "url":"http://bug.eatgo.com"},
+    {"name":"Gmail", "url":"http://gmail.eatgo.com"},
+    {"name":"Github", "url":"https://github.com/EATGOCO"},
+    {"name":"GOsa", "url":"http://gosa.adm.eatgo"},
+    {"name":"wwwsql", "url":"http://wwwsql.eatgo"},
+    {"name":"Beer Hackpad", "url":"https://beer.hackpad.com"},
+    {"name":"Test Ethercalc", "url":"https://ethercalc.org/g0v-hackath6n"}
 ]

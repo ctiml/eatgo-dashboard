@@ -8,7 +8,14 @@
         "url" : "",
         "list" : [
             {"name":"日會","url":"https://drive.google.com/a/eatgo.com/#folders/0B8ICnLO72uR9QVYxaERMU1ExRHc"},
-            {"name":"週會","url":"https://drive.google.com/a/eatgo.com/#folders/0B_HHoYJKMQgwek5NanUtclV3TU0"}
+            {"name":"週會","url":"https://drive.google.com/a/eatgo.com/#folders/0B_HHoYJKMQgwek5NanUtclV3TU0"},
+            {
+                "name":"Test",
+                "url":"",
+                "list":[
+                    {"name":"3","url":""}
+                ]
+            }
         ]
     }
 ]
