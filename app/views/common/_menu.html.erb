@@ -9,16 +9,18 @@
 
           <%= link_to(Setting.app_name, Setting.domain , :class => "brand" )%>
 
-          <%= render :partial => "common/search_form" %>
-
-   
+          <!-- <%= render :partial => "common/search_form" %> -->
      
           <div class="nav-collapse">
       
               <%= render_list :class => "nav" do |li|
-                li << link_to("Link-1","#")
-                li << link_to("Link-2","#")
-                li << link_to("Link-3","#")
+                li << link_to("首頁", "#", :class => 'category')
+                li << link_to("業務","#sales", :class => 'category')
+                li << link_to("產品","#product", :class => 'category')
+                li << link_to("行銷","#marketing", :class => 'category')
+                li << link_to("客服","#service", :class => 'category')
+                li << link_to("技術資源及規範","#tech", :class => 'category')
+                li << link_to("新手上路","#guide", :class => 'category')
               end %>
               
               <%= render :partial => "common/user_nav"%>

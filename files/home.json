@@ -1,0 +1,14 @@
+[
+    {"name":"目標管理", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0AvHHoYJKMQgwdFJDeTN6aWZzQmdrbi0zS2VnX1V6eVE&usp=drive_web#gid=20"},
+    {"name":"年度規劃", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0Am1J0Xu-qe5ddDZIY0RaWXVvUXB4TlBMV1R4UDc0dUE&usp=drive_web#gid=1"},
+    {"name":"日會-部門進度", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0Asj8P_G8RkPcdElmZ280bzZRNV9qUHVzbHp1eDIwNmc&usp=drive_web#gid=0"},
+    {"name":"亞洲旅客喜好調查表", "url":"https://docs.google.com/a/eatgo.com/spreadsheet/ccc?key=0Asj8P_G8RkPcdExKcHpURW54dkhVYXhGMmZOVWhiTFE&usp=drive_web#gid=0"},
+    {
+        "name" : "會議記錄",
+        "url" : "",
+        "list" : [
+            {"name":"日會","url":"https://drive.google.com/a/eatgo.com/#folders/0B8ICnLO72uR9QVYxaERMU1ExRHc"},
+            {"name":"週會","url":"https://drive.google.com/a/eatgo.com/#folders/0B_HHoYJKMQgwek5NanUtclV3TU0"}
+        ]
+    }
+]

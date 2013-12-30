@@ -11,18 +11,20 @@
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
-    padding: 0;
+    padding-top: 15px;
+    padding-right: 15px;
     font-size: 1.2em;
     border-right: solid 8px #d7e5dd;
     cursor: w-resize;
  
     ul {
-        margin: 0px;
-        padding: 20px;
+        margin: 0;
+        padding-left: 15px;
         list-style-type: none;
 
         li {
             line-height: 1.7em; 
+
             a {
                 text-decoration: none;
             }
@@ -32,6 +34,14 @@
             a.focus-on {
                 font-weight: bold;
             }
+            a.folder {
+                display: block;
+                font-weight: bold;
+                color: #777;
+            }
+        }
+        li.active {
+            background-color: #def;
         }
     }
 }
