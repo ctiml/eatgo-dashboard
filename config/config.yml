@@ -1,6 +1,6 @@
 defaults: &defaults
   app_name: "eatgo-dashboard"
-  domain: "http://eatgo-dashboard.dev"    
+  domain: "http://10.90.0.110"
   facebook_app_id: 
   facebook_secret: 
   hipchat_token: 
