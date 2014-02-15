@@ -12,17 +12,41 @@
           <!-- <%= render :partial => "common/search_form" %> -->
      
           <div class="nav-collapse">
-      
-              <%= render_list :class => "nav" do |li|
-                li << link_to("首頁", "#", :class => 'category')
-                li << link_to("業務","#sales", :class => 'category')
-                li << link_to("產品","#product", :class => 'category')
-                li << link_to("行銷","#marketing", :class => 'category')
-                li << link_to("客服","#service", :class => 'category')
-                li << link_to("技術資源及規範","#tech", :class => 'category')
-                li << link_to("新手上路","#guide", :class => 'category')
+
+              <ul class="nav">
+                  <% @menu.each do |m| %>
+                      <% if m.include? 'items' and m['items'].size > 0 %>
+                          <li>
+                          <%= link_to "##{m['id']}", :class => 'category' do %>
+                              <%= m['name'] %>
+                              <%= content_tag(:i,"",class:"icon-caret-down") %>
+                          <% end %>
+                          <ul class="dropdown-menu dropdown-fix">
+                          <% m['items'].each do |i| %>
+                          <li class="dropdown">
+                          <%= link_to "##{i['id']}" do %>
+                              <%= i['name'] %>
+                          <% end %>
+                          </li>
+                          <% end %>
+                        </ul>
+                          </li>
+                      <% else %>
+                          <li>
+                          <%= link_to "##{m['id']}", :class => 'category' do %>
+                              <%= m['name'] %>
+                          <% end %>
+                          </li>
+                      <% end %>
+                  <% end %>
+              </ul>
+              <%#= render_list :class => "nav" do |li|
+                  @menu.each do |m|
+                      nil.aa
+                      li << link_to(m['name'], "##{m['id']}", :class => 'category')
+                  end
               end %>
-              
+
               <%= render :partial => "common/user_nav"%>
 
           </div>

@@ -1,6 +1,6 @@
 defaults: &defaults
   app_name: "eatgo-dashboard"
-  domain: "http://10.90.0.110:3000"
+  domain: ""
   facebook_app_id: 
   facebook_secret: 
   hipchat_token: 
@@ -10,6 +10,7 @@ defaults: &defaults
   google_analytics_key: ""
   default_logo_url: "/logo.png"
   email_sender: ""
+  data: "main.json"
 
 development:
   <<: *defaults
