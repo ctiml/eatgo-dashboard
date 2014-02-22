@@ -1,0 +1,10 @@
+<%= form_tag raw_path, method: 'put' do %>
+    <h4><%= link_to "返回選單列表", raw_index_path %></h4>
+    <%= label_tag :parent, @parent, class: 'parent' %>
+    <%= label_tag :name, @name, class: 'name' %>
+    <%= label_tag :id, @id, class: 'id' %>
+    <br>
+    <%= submit_tag "Save", class: 'submit' %>
+    <%= button_tag "Cancel", onclick: "javascript:location.href='/raw/#{@id}';return false;" %>
+    <%= text_area_tag :content, @content, class: 'content' %>
+<% end %>

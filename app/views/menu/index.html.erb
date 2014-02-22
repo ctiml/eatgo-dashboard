@@ -1,0 +1,5 @@
+<%= render_list :id => 'sortable', :class => 'nav' do |li|
+    @menu.each do |m|
+        li << content_tag(:a, content_tag(:i) + content_tag(:span, m['name'], :id => m['id']), href: '#')
+    end
+end %>

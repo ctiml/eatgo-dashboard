@@ -1,0 +1,39 @@
+textarea.content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    padding: 9.5px;
+    width: 100%;
+    min-height: 500px;
+}
+
+label {
+    &.name {
+        display: inline-block;
+        padding: 5px 5px 5px 0;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    &.id {
+        display: inline-block;
+        padding: 5px 5px 5px 0;
+        font-size: 1.2em;
+    }
+}
+
+select.parent {
+    width: 150px;
+}
+input {
+    &.name {
+        width: 150px;
+    }
+    &.id {
+        width: 100px;
+    }
+}
+
+a.remove {
+    color: red;
+}

@@ -1,0 +1,35 @@
+<h3>選單列表</h3>
+<h4><%= link_to '返回首頁', root_path %></h4>
+<ul>
+    <% @menu.each do |m| %>
+
+        <li>
+        <% path = raw_path(:id => m['id'])%>
+        <%= link_to(content_tag(:i) + content_tag(:span, m['name'], :id=>m['id']), path) %>
+        <%= link_to(content_tag(:i, "", class:'icon-remove'), path, method:'delete', class: "remove", data: { confirm: "確定要刪除 \"#{m['name']}\" 嗎？" }) %>
+        <% if m.include? 'items' %>
+            <ul>
+                <% m['items'].each do |i| %>
+                    <li>
+                    <% sub_path = raw_path(:id => i['id']) %>
+                    <%= link_to(content_tag(:i) + content_tag(:span, i['name'], :id=>i['id']), sub_path) %>
+                    <%= link_to(content_tag(:i, "", class:'icon-remove'), sub_path, method:'delete', class: "remove", data: { confirm: "確定要刪除 \"#{i['name']}\" 嗎？" }) %>
+                    </li>
+                <% end %>
+            </ul>
+        <% end %>
+        </li>
+    <% end %>
+</ul>
+<%#= render_list :id => 'sortable' do |li|
+    @menu.each do |m|
+        li << content_tag(
+            :a,
+            content_tag(:i) + content_tag(:span, m['name'], :id => m['id']),
+            href: raw_path(:id=>m['id'])
+        ) + link_to(content_tag(:i, "", class:'icon-remove'), raw_path(:id =>m['id']), method:'delete', class: "remove", data: { confirm: "確定要刪除嗎？" })
+    end
+end %>
+<%= form_tag new_raw_path, method: 'get' do %>
+    <%= submit_tag "New" %>
+<% end %>

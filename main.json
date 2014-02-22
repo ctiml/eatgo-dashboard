@@ -1,0 +1,45 @@
+[
+  {
+    "id": "home",
+    "name": "首頁"
+  },
+  {
+    "id": "sales",
+    "name": "業務",
+    "items": [
+      {
+        "id": "xxx",
+        "name": "XXX"
+      }
+    ]
+  },
+  {
+    "id": "product",
+    "name": "產品"
+  },
+  {
+    "id": "marketing",
+    "name": "行銷",
+    "items": [
+
+    ]
+  },
+  {
+    "id": "service",
+    "name": "客服"
+  },
+  {
+    "id": "tech",
+    "name": "技術資源及規範"
+  },
+  {
+    "id": "guide",
+    "name": "新手上路",
+    "items": [
+      {
+        "id": "test",
+        "name": "測試"
+      }
+    ]
+  }
+]

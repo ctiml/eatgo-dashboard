@@ -1,0 +1,9 @@
+<%= form_tag edit_raw_path, method: 'get' do %>
+    <h4><%= link_to "返回選單列表", raw_index_path %></h4>
+    <%= label_tag :parent, @parent, class: 'parent' %>
+    <%= label_tag :name, @name, class: 'name' %>
+    <%= label_tag :id, @id, class: 'id' %>
+    <br>
+    <%= submit_tag "Edit", class: 'submit' %>
+    <pre><%= @content %></pre>
+<% end %>

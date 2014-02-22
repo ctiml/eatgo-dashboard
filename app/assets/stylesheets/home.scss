@@ -1,0 +1,84 @@
+//= require_self
+body {
+    padding-top: 40px;
+}
+.row {
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: box;
+    //position: relative;
+    //top: -20px;
+}
+.container {
+    width: 100%;
+}
+.list-left {
+    background-color: #f9f9ff;
+    display: block;
+    //min-width: 100px;
+    width: 230px;
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+    font-size: 1.2em;
+    border-right: solid 8px #d7e5dd;
+    cursor: w-resize;
+ 
+    ul {
+        margin: 0;
+        padding-left: 15px;
+        list-style-type: none;
+
+        li {
+            line-height: 1.7em; 
+
+            a {
+                text-decoration: none;
+            }
+            a.list-item {
+                display: block;
+            }
+            a.focus-on {
+                font-weight: bold;
+            }
+            div.folder {
+                cursor: pointer;
+                display: block;
+
+                a {
+                    display: inline-block;
+                    font-weight: bold;
+                    color: #777;
+                    padding-left: 5px;
+            }
+            }
+        }
+        li.active {
+            background-color: #def;
+        }
+    }
+}
+.list-right {
+    background-color: #eee;
+    position: relative;
+    display: block;
+    height: 800px;
+    width: 87%;
+    overflow: auto;
+    margin: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        overflow: hidden;
+    }
+}
